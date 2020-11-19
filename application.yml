@@ -12,6 +12,7 @@ eureka:
   instance:
     instance-id: student-provider-8004
 spring:
+  profiles: dev
   application:
     name: provider
 info:
@@ -28,6 +29,7 @@ eureka:
   instance:
     instance-id: student-provider-8004
 spring:
+  profiles: test
   application:
     name: provider
 info:
