@@ -3,13 +3,34 @@ spring:
     active: dev
 
 ---
+server:
+  port: 8004
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka01:7001/eureka/,http://eureka02:7003/eureka/,http://eureka03:7003/eureka/
+  instance:
+    instance-id: student-provider-8004
 spring:
-  profiles: dev
   application:
-    name: springcloud-config-dev
+    name: provider
+info:
+  app.name: chengouzi
+  company.name: chengouzi.icu
 
 ---
+server:
+  port: 8005
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka01:7001/eureka/,http://eureka02:7003/eureka/,http://eureka03:7003/eureka/
+  instance:
+    instance-id: student-provider-8004
 spring:
-  profiles: test
   application:
-    name: springcloud-config-test
+    name: provider
+info:
+  app.name: chengouzi
+  company.name: chengouzi.icu
+
