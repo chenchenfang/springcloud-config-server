@@ -17,7 +17,7 @@ spring:
     name: provider
 info:
   app.name: chengouzi
-  company.name: chengouzi.icu
+  company.name: chengouzi.icu.test
 
 ---
 server:
